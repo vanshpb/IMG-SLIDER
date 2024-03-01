@@ -16,6 +16,7 @@
   <body>
     <div class="container"><img src="" alt="" class="con" id="cont"/></div>
     <button onclick="fun()">click to stop</button>
+    <!-- <button class="cle" onclick="clear()">click to stop</button> -->
   </body>
   <script>
     const imgarr = [
@@ -27,9 +28,10 @@
       "inverted-dice-6.svg",
     ];
     let a = document.getElementById('cont');
+
     let i = 0;
    
-    let ss = setInterval(() => {
+    let  ss = setInterval(() => {
         if (i===6) {
             i=0;
             a.src = imgarr[i];
@@ -39,8 +41,15 @@
             i++;
         }
     },200);
+// console.log(ss);
+
+    // function change()
+    
     function fun(){
+        console.log(ss);
         clearInterval(ss);
+        console.log("click");
     }
+  
   </script>
 </html>
