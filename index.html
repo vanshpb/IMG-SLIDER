@@ -10,14 +10,19 @@
             margin: auto;
             margin-top: 100px;
         }
+        .con {
+            border-radius: 16px;
+
+        }
     </style>
   </head>
 
   <body>
+    <h2 style="text-align: center;">Challenge - stop at 1</h2>
     <div class="container"><img src="" alt="" class="con" id="cont"/></div>
     <button onclick="fun()">click to stop</button>
     <button onclick="funt()">Again</button>
-    <!-- <button class="cle" onclick="clear()">click to stop</button> -->
+    <button class="cle" onclick="cear()">change challenge</button>
   </body>
   <script>
     const imgarr = [
@@ -42,18 +47,29 @@
             i++;
         }
     },100);
-// console.log(ss);
-
-    // function change()
     
     function fun(){
         console.log(ss);
         clearInterval(ss);
         console.log("click");
     }
-
+    const arr = [
+    "Challenge - Stop at 1",
+    "Challenge - Stop at 2",
+    "Challenge - Stop at 3",
+    "Challenge - Stop at 4",
+    "Challenge - Stop at 5",
+    "Challenge - Stop at 6"
+    ]
     function funt() {
         location.reload();
+        
+    }
+
+    function cear() {
+        let no = Math.floor(Math.random() *  6);
+        let h = document.querySelector('h2');
+        h.innerText = arr[no];
     }
   
   </script>
