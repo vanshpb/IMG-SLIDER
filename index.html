@@ -16,6 +16,7 @@
   <body>
     <div class="container"><img src="" alt="" class="con" id="cont"/></div>
     <button onclick="fun()">click to stop</button>
+    <button onclick="funt()">Again</button>
     <!-- <button class="cle" onclick="clear()">click to stop</button> -->
   </body>
   <script>
@@ -40,7 +41,7 @@
             a.src = imgarr[i];
             i++;
         }
-    },200);
+    },100);
 // console.log(ss);
 
     // function change()
@@ -49,6 +50,10 @@
         console.log(ss);
         clearInterval(ss);
         console.log("click");
+    }
+
+    function funt() {
+        location.reload();
     }
   
   </script>
