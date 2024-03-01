@@ -15,6 +15,7 @@
 
   <body>
     <div class="container"><img src="" alt="" class="con" id="cont"/></div>
+    <button onclick="fun()">click to stop</button>
   </body>
   <script>
     const imgarr = [
@@ -38,5 +39,10 @@
             i++;
         }
     },200);
+    function fun(){
+        console.log(ss);
+        clearInterval(ss);
+        console.log("click");
+    }
   </script>
 </html>
