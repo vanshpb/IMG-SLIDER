@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100px;
+            margin: auto;
+            margin-top: 100px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="container"><img src="" alt="" class="con" id="cont"/></div>
+  </body>
+  <script>
+    const imgarr = [
+      "inverted-dice-1.svg",
+      "inverted-dice-2.svg",
+      "inverted-dice-3.svg",
+      "inverted-dice-4.svg",
+      "inverted-dice-5.svg",
+      "inverted-dice-6.svg",
+    ];
+    let a = document.getElementById('cont');
+    let i = 0;
+   
+    setInterval(() => {
+        if (i===6) {
+            i=0;
+            a.src = imgarr[i];
+        }
+        else {
+            a.src = imgarr[i];
+            i++;
+        }
+    },200);
+  </script>
+</html>
